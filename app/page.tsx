@@ -1,6 +1,8 @@
 import Image from "next/image";
 
 export default function Home() {
+  const fbLive: string = "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fcognewhope%2Fvideos%2F1222475879385691%2F&width=1280";
+
   return (
     <div>
       <main>
@@ -8,7 +10,7 @@ export default function Home() {
           <Image src='/cog_black.jpg' width={25} height={25} alt='Church of God Logo' />
         </div>
 
-        <div className="flex flex-col text-center border-4 border-yellow-500">
+        <div className="flex flex-col text-center border-4 border-yellow-500 bg-[url(/church.jpg)]">
           {/* Image will go behind these elements */}
           <div className="text-xl md:text-2xl">New Hope Church of God</div>
           <div>This is some text that'll represent the verse of the day</div>
@@ -23,8 +25,8 @@ export default function Home() {
               <div className="border-2 border-dashed border-black">
                 {/* Move this to a server action */}
                 <h2>Check out our latest FB livestream</h2>
-                <div className="flex justify-center border-dashed border-2 border-black ">
-                  <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fcognewhope%2Fvideos%2F1222475879385691%2F&width=1280" allowFullScreen width="90%" />
+                <div className="flex justify-center border-none overflow-hidden ">
+                  <iframe src={fbLive} allowFullScreen width="100%" height="100%" />
                 </div>
               </div>
 
