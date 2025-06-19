@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { hostGrotesk, lusitana } from "./ui/fonts";
+import Footer from "./ui/footer";
 
 export default function Home() {
   // TODO: Fetch the latest recorded broadcast if not live.
@@ -6,14 +8,14 @@ export default function Home() {
   const gMaps: string = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2972.5758341756728!2d-87.71748512357419!3d41.83743096795906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e326ad5253eef%3A0x1e93f44dae8733ae!2s3046%20S%20Central%20Park%20Ave%2C%20Chicago%2C%20IL%2060623!5e0!3m2!1sen!2sus!4v1750353913929!5m2!1sen!2sus";
 
   return (
-    <div>
+    <div className={`${hostGrotesk.className}`}>
       <main>
         <div className="flex justify-center mt-1 mb-1">
           <Image src='/cog_black.jpg' width={25} height={25} alt='Church of God Logo' />
         </div>
 
-        <div className="flex flex-col text-center text-shadow-lg/100 text-white place-content-center bg-[url(/church.jpg)] w-full h-[200px] bg-cover bg-center bg-no-repeat bg-blend-darken mb-8 md:h-[400px]">
-          <h1 className="text-2xl md:text-4xl">New Hope Church of God</h1>
+        <div className={`${lusitana.className} flex flex-col text-center text-shadow-lg/100 text-white place-content-center bg-[url(/church.jpg)] w-full h-[200px] bg-cover bg-center bg-no-repeat bg-blend-darken mb-8 md:h-[400px]`}>
+          <h1 className="text-3xl md:text-5xl">New Hope Church of God</h1>
           <h3>This is some text that'll represent the verse of the day</h3>
         </div>
 
@@ -33,7 +35,8 @@ export default function Home() {
               <div className="grid md:grid-cols-2 gap-2">
                 <div>
                 <iframe src={gMaps} className="relative w-full h-80 md:h-75"/>
-                <h3>Located at 3046 S. Central Park Ave., Chicago, IL, 60623</h3>
+                <h3>Located at</h3>
+                <h3>3046 S. Central Park Ave., Chicago, IL, 60623</h3>
                 </div>
 
                 <div>
@@ -50,6 +53,8 @@ export default function Home() {
 
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 }
