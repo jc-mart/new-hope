@@ -6,27 +6,26 @@ export default function Home() {
   return (
     <div>
       <main>
-        <div className="flex justify-center gap-2">
+        <div className="flex justify-center mt-1 mb-1">
           <Image src='/cog_black.jpg' width={25} height={25} alt='Church of God Logo' />
         </div>
 
-        <div className="flex flex-col text-center border-4 border-yellow-500 bg-[url(/church.jpg)]">
-          {/* Image will go behind these elements */}
-          <div className="text-xl md:text-2xl">New Hope Church of God</div>
-          <div>This is some text that'll represent the verse of the day</div>
+        <div className="flex flex-col text-center text-shadow-lg/100 text-white place-content-center bg-[url(/church.jpg)] w-full h-[200px] bg-cover bg-center bg-no-repeat bg-blend-darken mb-8 md:h-[400px]">
+          <h1 className="text-2xl md:text-4xl">New Hope Church of God</h1>
+          <h3>This is some text that'll represent the verse of the day</h3>
         </div>
 
         <div className="flex flex-row justify-center text-center">
-          <div className="basis-1/5 border-4 border-blue-500"></div>
+          <div className="basis-1/5 border-4 border-blue-500 hidden md:block"></div>
           
-          <div className="basis-3/5 border-4 border-red-500">
+          <div className="basis-full md:basis-3/5 border-4 border-red-500">
             <div className="flex flex-col">
 
               <div className="border-2 border-dashed border-black">
                 {/* Move this to a server action */}
                 <h2>Check out our latest FB livestream</h2>
-                <div className="flex justify-center border-none overflow-hidden ">
-                  <iframe src={fbLive} allowFullScreen width="100%" height="100%" />
+                <div className="flex justify-center border-none overflow-hidden">
+                  <iframe src={fbLive} allowFullScreen className="relative w-130 h-75"/>
                 </div>
               </div>
 
@@ -39,7 +38,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="basis-1/5 text-left border-4 border-green-500">Announcements</div>
+          <h2 className="basis-1/5 text-left border-4 border-green-500 hidden md:block">Announcements</h2>
 
         </div>
       </main>
