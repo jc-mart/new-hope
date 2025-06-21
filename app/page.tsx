@@ -16,40 +16,42 @@ export default function Home() {
 
         <div className={`${lusitana.className} flex flex-col text-center text-shadow-lg/100 text-white place-content-center bg-[url(/church.jpg)] w-full h-[200px] bg-cover bg-center bg-no-repeat bg-blend-darken mb-8 md:h-[400px]`}>
           <h1 className="text-3xl md:text-5xl">New Hope Church of God</h1>
-          <h3>This is some text that'll represent the verse of the day</h3>
+          {/* TODO: Code up a verse of the day fetcher */}
+          {/* This heading will hold the verse of the day */}
+          <h3></h3>
         </div>
 
-        <div className="flex flex-row justify-center text-center">
-          <div className="basis-1/5 border-4 border-blue-500 hidden md:block"></div>
+        <div className="flex md:flex-row flex-col-reverse justify-center text-center">
+          <div className="basis-1/5 hidden md:block"></div>
           
-          <div className="basis-full md:basis-3/5 pl-1 pr-1 md:pl-4 md:pr-4 border-4 border-red-500">
+          <div className="basis-full md:basis-3/5 pl-1 pr-1 md:pl-4 md:pr-4">
             <div className="flex flex-col">
-
               <div className="aspect-video">
                 {/* Move this to a server action */}
-                <h2 className="text-l md:text-xl">Check out our latest FB livestream</h2>
+                <h2 className="text-l md:text-xl">Latest Sunday Service Broadcast</h2>
                 <iframe src={fbLive} allowFullScreen className="relative w-full h-full"/>
               </div>
 
-              <h2 className="text-l md:text-xl">Come visit us in person</h2>
+              
               <div className="grid md:grid-cols-2 gap-2">
                 <div>
-                <iframe src={gMaps} className="relative w-full h-80 md:h-75"/>
-                <h3>Located at</h3>
-                <h3>3046 S. Central Park Ave., Chicago, IL, 60623</h3>
+                  <h2 className="text-l md:text-xl">Visit Us In Person</h2>
+                  <iframe src={gMaps} className="relative w-full h-80 md:h-75"/>
+                  <h3>Located at</h3>
+                  <h3>3046 S. Central Park Ave., Chicago, IL, 60623</h3>
                 </div>
 
                 <div>
-                  <h3>Service hours</h3>
-                  <p>Sunday: 10:00 A.M.</p>
-                  <p>Wednesday: 7:00 P.M.</p>
+                  <h3 className="text-l md:text-xl">Services</h3>
+                  <p>Sunday service at 10:00 a.m.</p>
+                  <p>Wednesday Bible study at 7:00 p.m.</p>
                 </div>
-              </div>
-
             </div>
           </div>
+        </div>
 
-          <h2 className="text-m md:text-l basis-1/5 text-left border-4 border-green-500 hidden md:block">Announcements</h2>
+          {/* This will hold the announcements */}
+          <h2 className="text-m md:text-l basis-1/5 text-left hidden md:block"></h2>
 
         </div>
       </main>
