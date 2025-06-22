@@ -5,7 +5,7 @@ export default function Footer() {
 	const cogPage: string = "https://churchofgod.org/";
 
 	return (
-		<footer className="grid-cols-1 md:grid-rows-auto m-2">
+		<footer className="grid-cols-1 md:grid-rows-auto mt-16 mb-8">
 			<h3 className="text-center">Quick Links</h3>
 
 			<div className="text-sm">
