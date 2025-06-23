@@ -25,7 +25,7 @@ export default function Home() {
         <div className="flex md:flex-row flex-col-reverse justify-center text-center mt-4 mb-4">
           <div className="basis-1/5 hidden md:block"></div>
           
-          <div className="basis-full md:basis-3/5 pl-1 pr-1 md:pl-4 md:pr-4">
+          <div className="basis-full md:max-w-[750px] pl-1 pr-1 md:pl-4 md:pr-4">
             <div className="flex flex-col">
               <div className="aspect-video">
                 {/* Move this to a server action */}
@@ -63,6 +63,7 @@ export default function Home() {
         </div>
 
           {/* This will hold the announcements */}
+          {/* Hidden attribute hides this element */}
           <h2 className="text-m md:text-l basis-1/5 text-left hidden md:block"></h2>
 
         </div>
